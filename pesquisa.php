@@ -14,8 +14,6 @@
 
         $pesquisa = $_POST['busca'] ?? '';
 
-        
-
         include "conexao.php";
 
         $sql = "SELECT * FROM pessoas WHERE nome LIKE '%$pesquisa%'";
@@ -48,8 +46,10 @@
                             <th scope="col">Telefone</th>
                             <th scope="col">Email</th>
                             <th scope="col">Data de Nascimento</th>
+                            <th scope="col" >Funções</th>
                             </tr>
                         </thead>
+                        
                         <tbody>
                             <?php 
 
@@ -60,15 +60,18 @@
                                     $telefone = $linha['telefone'];
                                     $email = $linha['email'];
                                     $data_nascimento = $linha['data_nascimento'];
-
+                                     /*Na linha 72 nós colocamos o id na forma GET*/    
                                     echo "
                                             <tr>
-                                            <th scope='row'>$nome</th>
-                                            <td>$enderco</td>
-                                            <td>$telefone</td>
-                                            <td>$email</td>
-                                            <td>$data_nascimento</td>
-                                            
+                                                <th scope='row'>$nome</th>
+                                                <td>$enderco</td>
+                                                <td>$telefone</td>
+                                                <td>$email</td>
+                                                <td>$data_nascimento</td>
+                                                <td style='width: 150px;'>
+                                                <a href='cadastro_edit.php?id=$cod_pessoas' class = 'btn btn-success'>Editar</a> 
+                                                <a href='' class = 'btn btn-danger'>Exluir</a>
+                                                </td>
                                             </tr>
                                         ";
                                 }

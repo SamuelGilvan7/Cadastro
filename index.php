@@ -19,12 +19,12 @@
                     <p>Acesse as funções.</p>
                     <a class="btn btn-primary btn-lg" href="cadastro.php" role="button">Cadastro</a>
                     <a class="btn btn-primary btn-lg" href="pesquisa.php" role="button">Pesquisa</a>
-
                </div> 
                
             </div> 
         </div>
     </div>
+    
    <!-- JavaScript <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
   </body>
 </html>
