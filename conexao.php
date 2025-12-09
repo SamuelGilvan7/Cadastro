@@ -10,7 +10,7 @@
         echo "Erro!";
     };
 
-    function mensagem($texto, $tipo){
+    /*a FUNÇÃO ALERTA*/function mensagem($texto, $tipo){
         echo "<div class='alert alert-$tipo' role='alert'>
                 $texto
               </div>";

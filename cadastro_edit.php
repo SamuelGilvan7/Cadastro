@@ -19,7 +19,7 @@
 
 
 
-     ?>
+    ?>
 
 
     <div class="container">
@@ -49,7 +49,7 @@
                     </div>
                     <div class="mb-3">
                         <input type="submit" class="btn btn-success" value="Salvar alterações">
-                        <input type="hidden" name="id" value="<?php echo $linha['data_nascimento'];?>"> <!--Deixa o id oculto -->
+                        <input type="hidden" name="id" value="<?php echo $linha['cod_pessoas'];?>"> <!--Deixa o id oculto -->
                     </div>
                 </form>
                 <a href="pesquisa.php" class="btn btn-info">Voltar para o Início</a>

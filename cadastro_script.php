@@ -13,6 +13,7 @@
         <div class="row">
            <?php 
             include "conexao.php";
+            
             $nome = $_POST['nome'];
             $endereco = $_POST['endereco'];
             $telefone = $_POST['telefone'];
@@ -25,7 +26,7 @@
 
             
             if(mysqli_query($conn, $sql)){
-                mensagem("$nome cadastrado com sucesso!",'success');
+                /*AQUI É A FUNÇÃO*/mensagem("$nome cadastrado com sucesso!",'success');
             } else {
                 mensagem("$nome NÃo cadastrado!",'danger');
             };
