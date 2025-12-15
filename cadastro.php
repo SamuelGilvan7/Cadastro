@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col">
                 <h1>Cadastro</h1>
-                <form action="cadastro_script.php" method="post">
+                <form action="cadastro_script.php" method="post" enctype ="multipart/form-data">
                     <div class="mb-3">
                         <label for="nome" class="form-label">Nome Completo</label>
                         <input type="text" class="form-control" placeholder="Informe o seu nome..."  name="nome"  required>
@@ -33,6 +33,10 @@
                     <div class="mb-3">
                         <label for="nascimento" class="form-label">Data de nascimeto</label>
                         <input type="date" class="form-control"  name="data_nascimento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nascimento" class="form-label">Foto</label>
+                        <input type="file" class="form-control"  name="foto" required accept="image/*">
                     </div>
                     <div class="mb-3">
                         <input type="submit" class="btn btn-success"  >

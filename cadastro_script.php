@@ -20,12 +20,21 @@
             $email = $_POST['email'];
             $data_nascimento = $_POST['data_nascimento'];
 
-            $sql = "INSERT INTO pessoas (nome, endereco, telefone, email, data_nascimento)
+            $foto = $_FILES['foto']; 
+            $nome_foto = mover_foto($foto);
+            if ($nome_foto == 0) {
+              $nome_foto = null;
+            }
+            
+            $sql = "INSERT INTO pessoas (nome, endereco, telefone, email, data_nascimento, foto)
             VALUES 
-            ('$nome', '$endereco', '$telefone', '$email', '$data_nascimento')";
+            ('$nome', '$endereco', '$telefone', '$email', '$data_nascimento' , '$nome_foto')";
 
             
             if(mysqli_query($conn, $sql)){
+                if ($nome_foto != null) {
+                  //mostra a imagem
+                }
                 /*AQUI É A FUNÇÃO*/mensagem("$nome cadastrado com sucesso!",'success');
             } else {
                 mensagem("$nome NÃo cadastrado!",'danger');

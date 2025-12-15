@@ -35,6 +35,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
+                        <th>Foto</th>
                         <th>Nome</th>
                         <th>Endereço</th>
                         <th>Telefone</th>
@@ -53,9 +54,17 @@
                         $telefone = $linha['telefone'];
                         $email = $linha['email'];
                         $data_nascimento = $linha['data_nascimento'];
+                        $foto = $linha['foto'];
+                        if (!$foto == null) {
+                            $mostra_foto = "<img src='img/$foto' style = 'width :250px; border-radius: 70px'>";
+                        }   else {
+                            $mostra_foto = '';
+                        }
 
                         echo "
                             <tr>
+                            
+                                <th>$mostra_foto</th>
                                 <th scope='row'>$nome</th>
                                 <td>$endereco</td>
                                 <td>$telefone</td>
